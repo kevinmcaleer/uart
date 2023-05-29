@@ -8,7 +8,7 @@ count = 0
 while True:
     if serial.any() > 0:
         message = serial.read()
-        print(message)
-    serial.write(bytes(str(count), 'utf-8'))
+        print(message.decode("utf-8"))
+    serial.write(bytes(str(count), "utf-8"))
     count += 1
 
